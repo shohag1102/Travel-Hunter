@@ -452,13 +452,14 @@ img{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
     }
+    .earning_left{
+        height: 300px;
+    }
     .earning_right{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
     }
-    .earning_right_top p{
-        margin-bottom: 20px;
-    }
+    
 
     .earning_right_bottom{
         grid-template-columns: 1fr;
@@ -474,6 +475,7 @@ img{
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        margin-top: 200px;
     }
     .footer_content{
         grid-template-columns: 1fr;
