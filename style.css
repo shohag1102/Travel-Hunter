@@ -148,8 +148,11 @@ img{
     grid-column-gap: 80px;
 }
 .tour_site_left{
-    display: grid;
-    place-items: left;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 120px;
+    /* display: grid; */
+    /* place-items: left; */
 }
 .tour_site_left .round{
     width: 50px;
@@ -167,13 +170,30 @@ img{
     margin-top: 10px;
     margin-left: 10px;
 }
+.tour_site_left{
+    position: relative;
+}
+
+.tour_site_left .yellow{
+    background-color: #f1c50e;
+    position: absolute;
+    width: 350px;
+    top: 163px;
+    left: 90px;
+    z-index: 1;
+}
+.tour_site_left  h1{
+    position: absolute;
+    top: 240px;
+    z-index: 2;
+}
 .tour_site_left h1{
     font-size: 35px;
     font-weight: 400;
     margin-top: -80px;
 }
 .tour_site_left p{
-    margin-top: -90px;
+    margin-top: 20px;
     font-size: 18px;
     font-weight: 200;
 }
@@ -260,7 +280,18 @@ img{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
 }
-
+.earning_right_top .yellow_box{
+    position: relative;
+}
+.yellow_box .yellow{
+    top: 50px;
+    right: 100px;
+    width: 350px;
+}
+.yellow_box h1{
+    position: absolute;
+    z-index: 2;
+}
 .earning_right_top h1{
     font-size: 35px;
     font-weight: 400;
@@ -268,7 +299,7 @@ img{
 }
 .earning_right_top p{
     font-weight: 300;
-    margin-top:15px ;
+    margin-top:115px ;
     font-size: 18px;
 }
 .earning_right_bottom{
@@ -304,6 +335,21 @@ img{
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: white;
+    /* position: relative; */
+}
+.footer_left{
+    /* position: relative; */
+}
+.yellow_box{
+    position: relative;
+}
+.footer_left h1{
+    position: absolute; 
+    z-index: 2; 
+}
+.footer_left .yellow{
+    left: 55px;
+    top: 17px;
 }
 .footer_left i{
     font-size: 30px;
@@ -320,6 +366,7 @@ img{
     width: 80%;
 }
 #address{
+    margin-top: 80px;
     margin-bottom: 30px;
 }
 .social{
@@ -330,7 +377,6 @@ img{
     margin-left: 10px;
 }
 .footer_right{
-    /* background-color: green; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -358,20 +404,9 @@ img{
 /* footer end */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* media query start */
 @media only screen and (max-width:480px){
+    /* heading start */
     .header_container{
         height: 900px;    
     }
@@ -393,7 +428,9 @@ img{
         display: grid;
         place-items: center;
     } 
-     /*booking */
+    /* heading end */
+
+     /*booking start*/
      .booking_wrapper{
         height: 1000px;
     }
@@ -405,7 +442,9 @@ img{
         grid-template-rows: repeat(3, 1fr);
         grid-row-gap: 30px;
     }
-    /* tour site  */
+    /*booking end*/
+
+    /* tour site start */
     .tour_site_container{
         height: 1060px;
     }
@@ -417,6 +456,20 @@ img{
     .tour_site_left{
         place-items: center;
     }
+    .tour_site_left .yellow{
+        background-color: #f1c50e;
+        position: absolute;
+        width: 350px;
+        top: 93px;
+        left: 90px;
+        z-index: 1;
+    }
+    .tour_site_left  h1{
+        position: absolute;
+        top: 150px;
+        z-index: 2;
+    }
+
     .round{
         margin-top: 0;
         margin-bottom: 90px;
@@ -425,13 +478,14 @@ img{
         margin-top: -60px;
     }
     .tour_site_left p{
-        margin-top: 30px;
+        margin-top: 0px;
+        line-height: 30px;
     }
     .tour_site_left button{
-        margin-top: 40px;
+        margin-top: -50px;
         margin-bottom: 50px;
     }
-    /* tour site  */
+    /* tour site end */
 
     /* gallery start */
     .gallery_container{
@@ -442,6 +496,7 @@ img{
         height: 400px;
     }
     /* gallery end */
+
     /* earning section start */
     .earning{
         margin-top: 1200px;
@@ -455,12 +510,24 @@ img{
     .earning_left{
         height: 300px;
     }
+    .earning_right_top h1{
+        font-size: 25px;
+    }
+    .earning_right_top p{
+        margin-bottom: 0;
+    }
+    .yellow_box .yellow{
+        top: 50px;
+        right: 0px;
+        width: 300px;
+    }
+    .earning_right_bottom{
+        margin-top: -60px;
+    }
     .earning_right{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
     }
-    
-
     .earning_right_bottom{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -469,6 +536,7 @@ img{
         margin-top: 50px;
     }
     /* earning section end */
+
     /* footer start */
     .footer_container{
         height: 660px;
@@ -484,6 +552,10 @@ img{
     .footer_left{
         text-align: center;
         margin-top: 50px;
+    }
+    .footer_left .yellow{
+        left: 55px;
+        top: 17px;
     }
     .footer_left i{
         margin-top: -0px;
@@ -508,7 +580,6 @@ img{
     .footer_right button{
         margin-bottom: 30px;
     }
-
     /* footer end */
 } 
 /* media query end */
